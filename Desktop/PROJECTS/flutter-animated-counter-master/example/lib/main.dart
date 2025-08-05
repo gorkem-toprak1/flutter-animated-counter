@@ -116,62 +116,6 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.all(16),
               child: Divider(),
             ),
-            // Yeni örnek: removeTrailingZeroes parametresi
-            const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'removeTrailingZeroes Örneği:',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const AnimatedFlipCounter(
-              value: 5.20,
-              fractionDigits: 2,
-              removeTrailingZeroes: false, // Gereksiz sıfırları göster
-              textStyle: TextStyle(fontSize: 24, color: Colors.red),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text('removeTrailingZeroes: false → 5.20'),
-            ),
-            const AnimatedFlipCounter(
-              value: 5.20,
-              fractionDigits: 2,
-              removeTrailingZeroes: true, // Gereksiz sıfırları gizle
-              textStyle: TextStyle(fontSize: 24, color: Colors.green),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text('removeTrailingZeroes: true → 5.2'),
-            ),
-            const AnimatedFlipCounter(
-              value: 5.25,
-              fractionDigits: 2,
-              removeTrailingZeroes: true, // Sıfır olmadığı için değişmez
-              textStyle: TextStyle(fontSize: 24, color: Colors.blue),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text('removeTrailingZeroes: true → 5.25 (değişmez)'),
-            ),
-            const AnimatedFlipCounter(
-              value: 5.00,
-              fractionDigits: 2,
-              removeTrailingZeroes: true, // Tüm sıfırlar gizlenir
-              textStyle: TextStyle(fontSize: 24, color: Colors.orange),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text(
-                  'removeTrailingZeroes: true → 5 (ondalık nokta da gizlenir)'),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(16),
-              child: Divider(),
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [0.01, 0.48, 1, 5, 400].map(_buildButtons).toList(),
